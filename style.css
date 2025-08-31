@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Orbitron', sans-serif;
+    color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,8 +36,33 @@ header .controls {
 header .controls button {
     background-color: goldenrod;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #000;
+    color: black;
     padding: 8px 10px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+#pizza {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px; /* ⬅️ Increased from 250px */
+    max-width: 90vw;
+    height: auto;
+    cursor: pointer;
+}
+
+#pizza:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}  
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
 }
