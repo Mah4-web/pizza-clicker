@@ -15,6 +15,7 @@ This project pushed me to improve my JavaScript logic, structure code with reusa
 * **CSS** – for responsive and animated user interface
 * **JavaScript** – for all game logic, DOM manipulation, and local storage management
 * **API integration** - for dynamic upgrade data 
+* **Google Fonts**
 
 ## ✅ Features Implemented
 
@@ -79,3 +80,11 @@ It will be a valuable addition to my professional portfolio. Moving forward, I a
 6. **DOM Manipulation**
 
    * [MDN DOM Guide](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
+7. * [W3Schools](https://www.w3schools.com/css/default.asp)
+
+8. * [Google Fonts](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap)
+
+9. * [API Fallback](https://www.reddit.com/r/reduxjs/comments/1216i7w/how_to_implement_fallback_apis_with_rtk_query_and/)
+
+10. * [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

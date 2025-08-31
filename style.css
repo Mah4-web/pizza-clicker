@@ -27,8 +27,8 @@ body {
 
 header .controls {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
 }
 
 header .controls button {
@@ -40,6 +40,7 @@ header .controls button {
     cursor: pointer;
 }
 
+
 #pizza {
     position: absolute;
     top: 50%;
@@ -49,6 +50,7 @@ header .controls button {
     max-width: 90vw;
     height: auto;
     cursor: pointer;
+    z-index: 10;
 }
 
 #pizza:active {
@@ -114,8 +116,6 @@ header .controls button {
     cursor: pointer;
 }
 
-    
-
 #upgrades {
     position: absolute;
     top: 15%;
@@ -134,4 +134,61 @@ header .controls button {
     background-color: #333;
     color: white;
     font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+    body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    }
+
+.header {
+    flex-direction: column;
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    }
+
+#pizza {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 70vw;
+    margin: 20px 0;
+    }
+
+#text-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 80%;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    }
+
+#upgrades {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 90%;
+    align-items: center;
+    padding: 10px;
+    }
+
+    .upgradeButtons {
+    width: 100%;
+    font-size: 1rem;
+    margin: 5px 0;
+    }
+
+.page-footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 30px;
+    }
 }

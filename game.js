@@ -58,12 +58,30 @@ toggleSoundBtn.addEventListener("click", () => {
     toggleSoundBtn.textContent = soundOn ? "🔊 Sound: On" : "🔇 Sound: Off";
 });
 
-// Fetches upgrade options from an API
+// Fetches upgrade options from an API with fallback
 
 async function getUpgrades() {
+    try {
     const response = await fetch("https://cookie-upgrade-api.vercel.app/api/upgrades");
-    return await response.json();
+
+    if (!response.ok) {
+        throw new Error("Network response was not ok");
+    }
+
+    const upgrades = await response.json();
+    return upgrades;
+    } catch (error) {
+    console.warn("Failed to fetch upgrades from API. Using fallback upgrades.", error);
+
+    // Fallback upgrade data
+    return [
+        { name: "Extra Cheese", cost: 10, increase: 1 },
+        { name: "Faster Oven", cost: 50, increase: 5 },
+        { name: "Pizza Robot", cost: 200, increase: 20 },
+    ];
+    }
 }
+
 
 async function displayUpgrades() {
     const upgrades = await getUpgrades();
